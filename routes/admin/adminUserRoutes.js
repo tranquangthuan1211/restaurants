@@ -19,5 +19,11 @@ router.post("/update/:id", (req, res) => {
   }
   userController.updateUserById(req, res);
 });
+router.post("/change-password", (req, res) => {
+  if (!req.isAuthenticated() || req.user.role !== "admin") {
+    return res.redirect("/users/signin");
+  }
+  userController.updateUserById(req, res);
+});
 
 module.exports = router;
