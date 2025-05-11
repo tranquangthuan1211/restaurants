@@ -7,43 +7,43 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('carts', [
       {
-        id: 1,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Hong Phuc' } }).then(user => user.id),
       },
       {
-        id: 2,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'John Doe' } }).then(user => user.id),
       },
       {
-        id: 3,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Jane Doe' } }).then(user => user.id),
       },
       {
-        id: 4,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Alice Smith' } }).then(user => user.id),
       },
       {
-        id: 5,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Bob Johnson' } }).then(user => user.id),
       },
       {
-        id: 6,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Charlie Brown' } }).then(user => user.id),
       },
       {
-        id: 7,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'David Wilson' } }).then(user => user.id),
       },
       {
-        id: 8,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Eve Davis' } }).then(user => user.id),
       },
       {
-        id: 9,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Frank Miller' } }).then(user => user.id),
       },
       {
-        id: 10,
+        id: Sequelize.fn('gen_random_uuid'),
         userId: await User.findOne({ where: { name: 'Grace Lee' } }).then(user => user.id),
       }
     ]);

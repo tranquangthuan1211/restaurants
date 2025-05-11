@@ -53,6 +53,8 @@ exports.countAll = async (userId) => {
   const cart = await this.findCartByUserId(userId);
   if (!cart) {
     console.log('Cart not found');
+    const newCart = await Cart.create({ userId: userId });
+    console.log('New cart created:', newCart);
     return 0;
   }
   const cartItems = await CartItem.findAll({
@@ -96,7 +98,7 @@ exports.getCart = async (userId) => {
       replacements: { userId },
       type: sequelize.QueryTypes.SELECT,
     });
-    console.log(result);
+    // console.log(result);
 
     if (!result) {
       console.log('User not found');

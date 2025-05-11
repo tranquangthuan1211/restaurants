@@ -90,7 +90,7 @@ exports.addToCart = async (req, res) => {
     }
 
     const productId = parseInt(req.body.productId);
-
+    console.log(productId)
     try {
         await cartService.addProductToCart(req.user.id, productId, 1);
         const result = {

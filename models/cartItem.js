@@ -7,13 +7,13 @@ const Product = require("./product");
 module.exports = (sequelize, DataTypes) => {
   const CartItem = sequelize.define('CartItem', {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
       autoIncrement: true,
       primaryKey: true,
       allowNull: false,
     },
     cartId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
       allowNull: false,
     },
     productId: {

@@ -1,3 +1,4 @@
+# Tran Quang Thuan
 # Project-ExJS-Postgres
 How to run:  
 1. `npm install` to install all the dependencies

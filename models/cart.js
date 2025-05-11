@@ -5,11 +5,10 @@ const User = require('./user');
 module.exports = (sequelize, DataTypes) => {
   const Cart = sequelize.define('Cart', {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
       autoIncrement: true,
       primaryKey: true,
       allowNull: false,
-      defaultValue: 100,
     },
     userId: {
       type: DataTypes.UUID,
