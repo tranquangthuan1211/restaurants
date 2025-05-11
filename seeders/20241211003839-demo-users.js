@@ -22,8 +22,8 @@ module.exports = {
     await queryInterface.bulkInsert('users', [
       {
         id: Sequelize.fn('gen_random_uuid'),
-        name: 'Hong Phuc',
-        email: 'phuc21744@gmail.com',
+        name: 'Quang Thuan',
+        email: 'tranquangthuan132@gmail.com',
         password: await hashPass('1234567'),
         createdAt: new Date(),
         updatedAt: new Date(),
