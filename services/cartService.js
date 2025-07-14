@@ -40,6 +40,7 @@ exports.addProductToCart = async (userId, productId, quantity) => {
     cartItem.quantity += 1;
     await cartItem.save();
   } else {
+    const maxId = await CartItem.max('id');
     cartItem = await CartItem.create({
       id: maxId + 1,
       cartId: cart.id,
